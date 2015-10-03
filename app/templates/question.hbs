@@ -1,9 +1,15 @@
-{{model.quester}}
+<div>
+<p>{{model.quester}}
 {{model.quest}}
-{{model.notes}}
+{{model.notes}}</p>
+{{update-question question=model update="update"}}
 
-{{#each answers as |answer|}}
-{{answer.responder}}
+</div>
+
+<ul>
+{{#each model.answers as |answer|}}
+<li>{{answer.responder}}</li>
 {{/each}}
+</ul>
 
 {{new-answer question=model saveAnswer="saveAnswer"}}
