@@ -1,0 +1,9 @@
+{{model.quester}}
+{{model.quest}}
+{{model.notes}}
+
+{{#each answers as |answer|}}
+{{answer.responder}}
+{{/each}}
+
+{{new-answer question=model saveAnswer="saveAnswer"}}
