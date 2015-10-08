@@ -1,6 +1,6 @@
-<p>{{#link-to 'question' question.id}}{{question.quester}}'s wants to ask:
-{{question.quest}}{{/link-to}}
-<button {{action 'delete' question}}>Delete</button>
-</p>
+<h4>{{#link-to 'question' question.id}}{{question.quester}}'s wants to ask:
+{{question.quest}}{{/link-to}}</h4>
+<button class="btn btn-danger btn-xs"{{action 'delete' question}}>Delete</button>
+
 
 <br>

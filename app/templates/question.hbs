@@ -1,15 +1,29 @@
+<h2>Answer?</h2>
+
+<div class="jumbotron">
+  <div class="container">
+    <div id="random">
+    <h2>about bears</h2>
+    <h3>(only about bears)</h3>
+    </div>
+  </div>
+</div>
+
 <div>
-<p>{{model.quester}}
-{{model.quest}}
-{{model.notes}}</p>
+<h3>{{model.quester}} wants to know:</h3>
+<br>
+<h4>{{model.quest}}
+{{model.notes}}</h4>
 {{update-question question=model update="update"}}
 
 </div>
 
-<ul>
-{{#each model.answers as |answer|}}
-<li>{{answer.responder}}</li>
-{{/each}}
-</ul>
+<h4>
+  <ul>
+    {{#each model.answers as |answer|}}
+    <li>{{answer.responder}}</li>
+    {{/each}}
+  </ul>
+</h4>
 
 {{new-answer question=model saveAnswer="saveAnswer"}}
